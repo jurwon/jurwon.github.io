@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Travel & Share</title>
+  <style>
+    header {
+      position: relative;
+      top: 0px;
+      background-image: url("장관2.jpg");
+      background-size: cover;
+      width: 100%;
+      height: 400px;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    nav {
+      margin: 0 auto;
+      width: 845px;
+      position: relative;
+      list-style-type: none;
+      padding-left: 30px;
+    }
+
+    nav a {
+      font-family: "휴먼둥근헤드라인";
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      margin-left: 23px;
+      padding-right: 30px;
+      border-right: 1px solid;
+      letter-spacing: 10px;
+      cursor: pointer;
+    }
+
+    footer {
+      position: relative;
+      height: 200px;
+      bottom: 0px;
+      background-color: #023183;
+
+    }
+
+    ul {
+      width: 300px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+
+    .bodystyle {
+      min-width: 800px;
+      background-color: white;
+      margin: 0px;
+    }
+
+    .titlestyle {
+      font-family: "휴먼둥근헤드라인";
+      font-size: 80px;
+      position: relative;
+      color: floralwhite;
+      letter-spacing: -10px;
+      padding-top: 175px;
+      text-align: center;
+    }
+
+    .menu a {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .menu a:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .menu:hover a {
+      padding-right: 25px;
+    }
+
+    .menu:hover a:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .top {
+      position: fixed;
+      width: 80px;
+      height: 30px;
+      bottom: 30px;
+      right: 30px;
+      color: white;
+      text-decoration: none;
+      background-color: #02315E;
+      border-radius: 50px;
+      padding-left: 15px;
+    }
+
+    .infoTB {
+      position: relative;
+      margin: 0 auto;
+      width: 860px;
+    }
+
+    .infoTB div {
+      display: inline-block;
+      list-style-type: none;
+    }
+
+    .infoTB li {
+      overflow: hidden;
+      margin-left: 19px;
+      margin-top: 14px;
+    }
+
+    .infoTB img {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+    }
+
+    .infoTB li :FIRST-CHILD {
+      margin: 0;
+    }
+
+
+    .infoTB img:HOVER {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+
+    .inTb1 {
+      margin-top: 80px;
+      margin-bottom: 50px;
+      margin-left: 200px;
+
+    }
+
+    .inTb2 {
+      margin-top: 80px;
+      margin-bottom: 200px;
+      margin-left: 200px;
+    }
+
+    .plan {
+      margin-left: 270px;
+      margin-top: 100px;
+      margin-bottom: 200px;
+    }
+
+    .account {
+      display: inline-block;
+      margin-right: 30px
+    }
+
+    .account:hover {
+      box-shadow: 2px 2px 2px black,
+        0 0 25px blue,
+        0 0 5px darkblue;
+      cursor: pointer;
+
+    }
+
+    .map {
+      display: inline-block;
+      margin-right: 30px
+    }
+
+    .map:hover {
+      box-shadow: 2px 2px 2px black,
+        0 0 25px blue,
+        0 0 5px darkblue;
+      cursor: pointer;
+    }
+
+    .photo {
+      display: inline-block;
+    }
+
+    .photo:hover {
+      box-shadow: 2px 2px 2px black,
+        0 0 25px blue,
+        0 0 5px darkblue;
+      cursor: pointer;
+    }
+
+    .account-box {
+      margin-left: 80px;
+      padding-Top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .map-box {
+      margin-left: 80px;
+      padding-Top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .photo-box {
+      margin-left: 80px;
+      padding-Top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .Website {
+      text-align: center;
+    }
+
+    .Website h1 {
+      text-align: left;
+    }
+
+    .site1 {
+      display: inline-block;
+      width: 400px;
+      height: 300px;
+      margin-right: 50px;
+      margin-top: 50px;
+    }
+
+    }
+
+    .site2 {
+      display: inline-block;
+      width: 400px;
+      height: 300px;
+      margin-top: 50px;
+    }
+
+    .card {
+      margin-left: 25%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 40%;
+      border-radius: 5px;
+
+    }
+
+    .card:hover {
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card img{
+      margin-top: 10px;
+    }
+
+    .container {
+      padding: 2px 16px;
+      background-color: #CED8F6;
+    }
+
+    .container span{
+      font-size: 13px;
+      border-radius: 5px;
+      background-color: orange;
+
+    }
+
+    #profile {
+      font-size: 2em;
+      letter-spacing: 12px;
+      margin:50px 30px;
+      margin-left: 20%;
+      padding-left: 50px;
+      color: #02315E;
+      border-bottom: 1px solid;
+      width: 800px;
+      height: 45px;
+    }
+
+    #info {
+      font-size: 2em;
+      letter-spacing: 12px;
+      margin:50px 30px;
+      margin-left: 20%;
+      padding-left: 50px;
+      color: #02315E;
+      border-bottom: 1px solid;
+      width: 800px;
+      height: 45px;
+    }
+
+    #Function {
+      font-size: 2em;
+      letter-spacing: 12px;
+      margin:50px 30px;
+      margin-left: 20%;
+      padding-left: 50px;
+      color: #02315E;
+      border-bottom: 1px solid;
+      width: 800px;
+      height: 45px;
+    }
+
+    #Website {
+      font-size: 2em;
+      letter-spacing: 12px;
+      margin:50px 30px;
+      margin-left: 20%;
+      padding-left: 50px;
+      color: #02315E;
+      border-bottom: 1px solid;
+      width: 800px;
+      height: 45px;
+    }
+  </style>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body class="bodystyle">
+  <header>
+    <div class="titlestyle">
+      <a>Travel & Share</a>
+    </div>
+    <br> <br> <br>
+    <nav>
+      <span class="menu"><a href="#profile">Profile</a></span>
+      <span class="menu"><a href="#info">Info</a></span>
+      <span class="menu"><a href="#Function">Function</a></span>
+      <span class="menu"><a href="#Website">Website</a></span>
+    </nav>
+  </header>
+  <section class="content">
+
+    <section class="Profile">
+      <h1 id="profile">Profile</h1>
+      <br><br>
+      <div class="card">
+        <div class="container">
+          <img src="여행가.jpg" alt="사진" style="width:100%">
+          <h4><b style="font-size:1.5em">Son Juwon</b></h4>
+          <p style="font-size:13px">경성대학교 소프트웨어학과</p>
+          <p>skills</p>
+          <p><span style="background-color:#F5A9BC">Java</span>,<span style="background-color:#F7BE81">HTML</span>,
+            <span style="background-color:#F2F5A9">Css</span>,<span style="background-color:#9FF781">JavaScript</span>,
+            <span style="background-color:#819FF7">Python</span>,<span style="background-color:#BE81F7">C</span></p>
+          <p>Feature</p>
+          <p><span style="background-color:#F5A9BC">부지런함</span>,<span style="background-color:#F7BE81">책임감</span></p>
+        </div>
+      </div>
+
+    </section>
+<br><br>
+    <section class="Info">
+      <H1 id="info">Info</H1>
+      <H1 style="letter-spacing: 10px; text-align: center; margin: 50px 0px; font-family: Nanum Gothic; font-size:1.5em">
+        Share your Happiest Time!</H1>
+      <br>
+      <div class="infoTB">
+        <div>
+          <li><a style="width: 450px; height: 400px;"> <img width="450px" height="400px" src="info.jpg"></a></li>
+        </div>
+        <div>
+          <ul class="fa-ul custom-list">
+            <li><i class="fa fa-check fa-fw"></i>여행 일정</li>
+            <li><i class="fa fa-check fa-fw"></i>여행하는 나라의 물가</li>
+            <li><i class="fa fa-check fa-fw"></i>숙박 정보</li>
+            <li><i class="fa fa-check fa-fw"></i>비행기 예약 정보</li>
+            <li><i class="fa fa-check fa-fw"></i>환전 꿀팁</li>
+            <li><i class="fa fa-check fa-fw"></i>먹거리 꿀팁</li>
+            <li><i class="fa fa-check fa-fw"></i>...</li>
+            <li><i class="fa fa-check fa-fw"></i>...</li>
+            <li><i class="fa fa-check fa-fw"></i>...</li>
+            <li><i class="fa fa-check fa-fw"></i>...등 각종 꿀팁들만 모으자!</li>
+          </ul>
+        </div>
+      </div>
+      <table class="inTb1">
+        <tr>
+          <td style="font-weight: bolder; border-top: 2px solid; font-size: 30px; width: 200px; padding-left: 12px; padding-top: 10px;">제작배경</td>
+          <td style="padding-left: 29px; border-top: 1px solid; width: 601px;">여행가는 것을 좋아하는데, 처음 검색할 때는 어디를 가면 좋을지 감이 잡히지 않았다.
+            그래서 각종 꿀팁 정보들만 모은 웹 서비스를 만들고 싶었다.</td>
+        </tr>
+      </table>
+      <table class="inTb2">
+        <tr>
+          <td style="font-weight: bolder; border-top: 2px solid; font-size: 30px; width: 200px; padding-left: 12px; padding-top: 10px;">제작목적</td>
+          <td style="padding-left: 29px; border-top: 1px solid; width: 601px; ">한 사이트 안에서 여행 정보의 공유, 여행경로 짜기, 사진보기, 후기보기 등의 기능을 모두 사용하고 싶었기 때문이다.</td>
+        </tr>
+      </table>
+
+    </section>
+
+    <section class="Function">
+      <H1 id="Function">Function</H1>
+      <div class="plan">
+
+        <div class="account">
+          <img src="account-box.PNG" alt="이미지" onclick="id1()" width="200px" height="200px">
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+              <div class="account-box">
+                <h1 style="color:#02315E; font-family: 휴먼둥근헤드라인">Account</h1>
+                <p>: 계정 생성 및 관리</p>
+                <p>관심있는 분야 자동 서치</p>
+                <p>후기란에 게시글 작성</p>
+                <p>좋아요 등의 블로그 기능 추가 가능</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="map">
+          <img src="map-box.PNG" alt="이미지" onclick="id2()" width="200px" height="200px">
+          <div id="id02" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+              <div class="map-box">
+                <h1 style="color:#02315E; font-family: 휴먼둥근헤드라인">Map</h1>
+                <p>: 한눈에 보는 여행 경로</p>
+                <p>가고싶은 곳을 구글맵에 표시해줌</p>
+                <p>여행일정 최적화</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="photo">
+          <img src="photo-box.PNG" alt="이미지" onclick="id3()" width="200px" height="200px">
+          <div id="id03" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+              <div class="photo-box">
+                <h1 style="color:#02315E; font-family: 휴먼둥근헤드라인">Photo</h1>
+                <p>: 가고싶은 여행지 미리 체험</p>
+                <p>숙소,관광명소,맛집,쇼핑리스트 등의 정보에 사진을 넣어 이해를 도움</p>
+                <p>호텔 후기, 여행지 후기,항공 후기 등을 사진으로 표기</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function id1() {
+            document.getElementById('id01').style.display = 'block'
+            var modal = document.getElementById('id01');
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          }
+
+          function id2() {
+            document.getElementById('id02').style.display = 'block'
+            var modal = document.getElementById('id02');
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          }
+
+          function id3() {
+            document.getElementById('id03').style.display = 'block'
+            var modal = document.getElementById('id03');
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          }
+        </script>
+
+      </div>
+    </section>
+
+
+
+    <section class="Website">
+      <H1 id="Website">Similar Website</H1>
+      <span class="site1">
+        <a href="https://www.earthtory.com/ko/" target="_blank"><img src="어스토리.JPG" alt="이미지" width="350px" height="300px"></a>
+      </span>
+      <span class="site2">
+        <a href="http://www.tourtips.com/" target="_blank"><img src="투어팁스.JPG" alt="이미지" width="350px" height="300px"></a>
+      </span>
+      <br>
+      <br>
+      <br>
+
+    </section>
+  </section>
+  <footer>
+    <div class="top"><a href="#" class="top">↑Top</a></div>
+  </footer>
+</body>
+
+</html>
